@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <label> <%=user.fName%></label>
+        </div>
+        <div class="mainContainer">
+            <label>Your tasks: </label>
+            <div class="tasks">
+            <%user.task.forEach((task)=>{%>
+                <div class="task"> <label for="">Name:<%=task.name%></label> 
+               <label for="">Description:<%=task.description%></label>
+               <form action="/delete/<%=task._id%>" method="post">
+               <button class="deleteBtn" type="submit"><img src="remove.png"></button>
+            </form>
+
+           </div>
+                   
+           <% })%>
+        </div>
+            
+        </div>
+        <div class="taskBox">
+            <form action="/addTask" method="post">
+
+            <label>Name:</label>
+            <input type="text" name="name" class="inbox" placeholder="Tasks  Name">
+            <label>Description:</label>
+            <input type="text" name="description" class="desBox" placeholder="Tasks  description">
+
+
+            <button class="btn" type="submit">Add</button>
+
+            </form>
+            <form action="/login" method="get">
+                <button class="btn" type="submit">Log Out</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
