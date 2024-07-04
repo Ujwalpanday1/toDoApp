@@ -9,20 +9,22 @@
 <body>
     <div class="container">
         <div class="top">
-            <label> <%=user.fName%></label>
+            <label> Welcome <%=user.fName%>! </label>
         </div>
         <div class="mainContainer">
-            <label>Your tasks: </label>
+            <div class="tasklabel"><label>Your tasks: </label></div>
+            
             <div class="tasks">
             <%user.task.forEach((task)=>{%>
                 <div class="task"> <label for="">Name:<%=task.name%></label> 
                <label for="">Description:<%=task.description%></label>
-               <form action="/delete/<%=task._id%>" method="post">
-               <button class="deleteBtn" type="submit"><img src="remove.png"></button>
-            </form>
+              
 
            </div>
-                   
+           <div class="btnbox">  <form action="/delete/<%=task._id%>" method="post">
+               <button class="deleteBtn" type="submit"><img src="remove.png"></button>
+            </form></div>
+                  
            <% })%>
         </div>
             

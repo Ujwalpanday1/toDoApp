@@ -13,7 +13,7 @@ body{
 }
 .container{
     background-color: #fff;
-    height: 80vh;
+    height: 85vh;
     width: 60vw;
     display: flex;
     flex-wrap: wrap;
@@ -23,20 +23,32 @@ body{
 }
 .top{
     width: 40vw;
+    height: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
 
 }
 .mainContainer{
-    width: 40vw;
+    width: 50vw;
     height: 30vh;
     font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.mainContainer .tasklabel{
+    width: 40vw;
+    height: 5vh;
     
-    
-
 }
 .tasks{
-    width: 40vw;
+    width: 50vw;
     height: 25vh;
     overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .tasks::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
@@ -50,6 +62,10 @@ body{
 .task{
     background-color: #f2f2f2;
     margin: 10px;
+    box-sizing: border-box;
+}
+.taskBox{
+    height: 40vh;
 }
 
 .taskBox form .inbox{
@@ -85,6 +101,13 @@ body{
     background-color: #007bff;
     margin-bottom: 2vh;
 }
+.tasks .btnbox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
 .deleteBtn img{
     height: 2vh;
     width: auto;
